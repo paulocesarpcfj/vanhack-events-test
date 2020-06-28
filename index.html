@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanHack Events</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="https://vanhack.com/" target="_blank">
+            <img class="brand" src="https://i.vimeocdn.com/portrait/32455776_120x120.jpg" />
+        </a>
+
+        <div class="rightPane">
+            <div class="premiumLink">
+                <a href="https://vanhack.com/premium" target="_blank"><i class="fas fa-crown"></i> Join Premium</a>
+            </div>
+            <div class="myEvents">
+                My Events (<span id="eventsCounter">0</span>)
+
+                <ul id="my-events-list"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h1>VanHack Events</h1>
+
+        <ul class="eventTypeFilters">
+            <li class="eventType meetup" onclick="filterEventsBy('meetup')">
+                <i class="fas fa-user-friends"></i>
+                MeetUp
+            </li>
+            <li class="eventType leap" onclick="filterEventsBy('leap')">
+                <i class="fas fa-plane"></i>
+                Leap
+            </li>
+            <li class="eventType recruitingMission" onclick="filterEventsBy('recruitingMission')">
+                <i class="far fa-star"></i>
+                Recruiting Mission
+            </li>
+            <li class="eventType vanhackaton" onclick="filterEventsBy('vanhackaton')">
+                <i class="fas fa-laptop"></i>
+                VanHackaton
+            </li>
+            <li class="eventType webinar" onclick="filterEventsBy('webinar')">
+                <i class="fas fa-chart-pie"></i>
+                Webinar
+            </li>
+            <li class="eventType clear hidden" onclick="clearFilters()">
+                <i class="fas fa-times"></i>
+                Clear
+            </li>
+        </ul>
+
+        <h4 class="featuredEventsTitle">FEATURED EVENTS</h4>
+
+        <div id="featuredEvents" class="cardList featuredEvents"></div>
+
+        <h4 class="allEventsTitle">ALL EVENTS</h4>
+
+        <div id="allEvents" class="cardList allEvents"></div>
+    </section>
+
+    <footer>
+        Made with &hearts; by
+        <a href="https://pauloferreira.dev" target="_blank">Paulo Ferreira</a>
+    </footer>
+
+    <div class="popup closed">
+        <div class="overlay"></div>
+
+        <div class="content"></div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
+        integrity="sha256-HkXXtFRaflZ7gjmpjGQBENGnq8NIno4SDNq/3DbkMgo="
+        crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./scripts.js"></script>
+</body>
+</html>
